@@ -10,4 +10,9 @@ Describe $file.BaseName -Tags Unit {
         $null = [System.Management.Automation.ProcessRunspaceDebugEndEventArgs]::Tokenize($contents, [ref]$errors)
         $errors.Count | Should Be 0
     }
+    Context "Basic features" {
+        . $file
+        
+        Set-Content TestDrive:\mssql2012.ini 
+    }
 }
