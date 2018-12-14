@@ -1,20 +1,9 @@
-<#
-.NOTES
+$here = Split-Path -Parent $MyInvocation.MyCommand.Path
+$sut = (Split-Path -Leaf $MyInvocation.MyCommand.Path) -replace '\.Tests\.', '.'
+. "$here\$sut"
 
-.SYNOPSIS
-
-.DESCRIPTION
-
-.PARAMETER p
-
-    .NOTES
-    Tags:
-    Author: Name (Email)
-    Website: https://netcompany.com
-    Copyright: (c) 2018 by Netcompany A/S
-
-.EXAMPLE
-
-.LINK
-
-#>
+Describe "test1" {
+    It "does something useful" {
+        $true | Should -Be $true
+    }
+}

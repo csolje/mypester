@@ -1,13 +1,11 @@
 <#
-.NOTES
-
 .SYNOPSIS
 
 .DESCRIPTION
 
 .PARAMETER p
 
-    .NOTES
+.NOTES
     Tags:
     Author: Name (Email)
     Website: https://netcompany.com
@@ -15,6 +13,6 @@
 
 .EXAMPLE
 
-.LINK
+
 
 #>
