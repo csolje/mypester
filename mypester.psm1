@@ -4,11 +4,14 @@ $Private = @( Get-ChildItem -Path $PSScriptRoot\Private\*.ps1 -ErrorAction Silen
 $Required = @( Get-Item -Path $PSScriptRoot\Required\Required.ps1 )
 
 # Dot source the files
-Foreach ($import in @($Public + $Private + $Required)) {
-    Try {
+Foreach ($import in @($Public + $Private + $Required))
+{
+    Try
+    {
         . $import.FullName
     }
-    Catch {
+    Catch
+    {
         Write-Error -Message "Failed to import function $($import.FullName): $_"
     }
 }
